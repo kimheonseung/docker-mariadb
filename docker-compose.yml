@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mariadb-10.4.15-test:
+    image: mariadb-alpine:1.0
+    container_name: mariadb-10.4.15-test
+    restart: always
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./volumes/data:/var/lib/mysql
+      - ./volumes/logs:/var/log/mysql
+      - ./volumes/configs/my.cnf:/etc/my.cnf.d/my.cnf
+    environment:
+      - MYSQL_DATABASE=test
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
