@@ -6,6 +6,7 @@
 ## Description
 - Alpine Linux 3.12 기반의 저용량 MariaDB 10.4.15 컨테이너
 - 설치하며 환경변수로 전달받은 옵션 적용은 scripts 디렉토리 내부의 쉘 스크립트 파일을 통해 설정됨
+- Alpine MariaDB 레파지토리 업데이트에 따라 실행이 보장되지 않을 
   
 ## 빌드
 - build.sh 또는 build_windows.bat 실행 (docker build --tag mariadb-alpine:1.0 .)
